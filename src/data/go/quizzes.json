@@ -1,0 +1,22 @@
+[
+  {
+    "id": "go-vars-q1",
+    "lessonId": "variables",
+    "type": "fill-blank",
+    "question": "Complete the short declaration: count ___ 10",
+    "correct": ":=",
+    "explanation": "The := operator declares a new variable and infers its type from the assigned value, all in one step.",
+    "hints": ["It's two characters, not the usual single equals sign.", "This is Go's \"short variable declaration\" syntax."],
+    "xp": 20
+  },
+  {
+    "id": "go-vars-q2",
+    "lessonId": "variables",
+    "type": "true-false",
+    "question": "A declared-but-unassigned int variable in Go contains unpredictable garbage memory, just like in C++.",
+    "correct": false,
+    "explanation": "Go always initializes variables to a predictable zero value (0 for int, \"\" for string, false for bool) — never garbage memory.",
+    "hints": ["Reread the lesson's \"Zero values\" section."],
+    "xp": 20
+  }
+]
