@@ -1,0 +1,25 @@
+[
+  {
+    "id": "rust-vars-q1",
+    "lessonId": "variables",
+    "type": "multiple-choice",
+    "question": "What keyword makes a Rust variable mutable?",
+    "options": ["mutable", "mut", "var", "change"],
+    "correct": 1,
+    "explanation": "`mut` is the keyword — Rust variables are immutable by default, and `mut` opts a specific variable into being reassignable.",
+    "hints": ["It's a short, three-letter keyword.", "Look at the lesson's second code example."],
+    "xp": 25
+  },
+  {
+    "id": "rust-vars-q2",
+    "lessonId": "variables",
+    "type": "debug",
+    "question": "This code should increment x and print the result, but it won't compile. Fix it.",
+    "starterCode": "let x = 5;\nx = x + 1;",
+    "editorLanguage": "rust",
+    "solution": "let mut x = 5;\nx = x + 1;",
+    "explanation": "Variables are immutable by default in Rust; reassigning `x` requires declaring it with `let mut x`.",
+    "hints": ["The lesson explains Rust's default immutability.", "You need the mut keyword somewhere in the declaration."],
+    "xp": 35
+  }
+]

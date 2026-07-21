@@ -1,0 +1,14 @@
+{
+  "id": "rust",
+  "tiers": {
+    "easy": {
+      "label": "Easy",
+      "lessons": [
+        { "id": "variables", "title": "Variables & Mutability", "duration": 20, "xp": 100 }
+      ]
+    },
+    "medium": { "label": "Medium", "lessons": [] },
+    "hard": { "label": "Hard", "lessons": [] },
+    "expert": { "label": "Expert", "lessons": [] }
+  }
+}
