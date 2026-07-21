@@ -1,0 +1,88 @@
+[
+  {
+    "id": "py-vars-q1",
+    "lessonId": "variables",
+    "type": "multiple-choice",
+    "question": "What is the output of `print(type(5))`?",
+    "options": ["<class 'int'>", "<class 'str'>", "int", "5"],
+    "correct": 0,
+    "explanation": "The type() function returns the class object representing a value's type, not the value itself or a plain string.",
+    "hints": ["Think about what type() returns, not what print() shows for the value alone.", "It returns a class object, not a bare word like \"int\"."],
+    "xp": 25,
+    "timeLimit": 60
+  },
+  {
+    "id": "py-vars-q2",
+    "lessonId": "variables",
+    "type": "true-false",
+    "question": "In Python, once you assign a variable an integer, it can never hold a string later.",
+    "correct": false,
+    "explanation": "Python is dynamically typed — a variable's type is determined by its current value and can change on reassignment.",
+    "hints": ["Python doesn't require you to declare a fixed type for a variable."],
+    "xp": 20
+  },
+  {
+    "id": "py-vars-q3",
+    "lessonId": "variables",
+    "type": "fill-blank",
+    "question": "Complete the code: ___ = True",
+    "correct": "is_valid",
+    "acceptedAnswers": ["in_stock", "flag", "is_active"],
+    "explanation": "Any valid variable name works here — the lesson used is_valid as its example of a bool.",
+    "hints": ["Look back at the lesson's bool example."],
+    "xp": 20
+  },
+  {
+    "id": "py-control-q1",
+    "lessonId": "control-flow",
+    "type": "output-prediction",
+    "question": "What does this code print?",
+    "code": "age = 15\nif age < 13:\n    print(\"child\")\nelif age < 20:\n    print(\"teenager\")\nelse:\n    print(\"adult\")",
+    "editorLanguage": "python",
+    "expectedOutput": "teenager",
+    "explanation": "age is 15, which fails the first check (< 13) but passes the second (< 20), so the elif branch runs.",
+    "hints": ["Check each condition in order, top to bottom.", "15 is not less than 13, but it is less than 20."],
+    "xp": 30
+  },
+  {
+    "id": "py-control-q2",
+    "lessonId": "control-flow",
+    "type": "debug",
+    "question": "This loop should print 0, 1, 2 — but it never stops. Fix it.",
+    "starterCode": "count = 0\nwhile count < 3:\n    print(count)\n",
+    "editorLanguage": "python",
+    "expectedOutput": "0\n1\n2",
+    "explanation": "The loop body never changes `count`, so the condition `count < 3` stays true forever. Adding `count += 1` inside the loop fixes it.",
+    "hints": ["What does the lesson say about while loops and their exit condition?", "Something inside the loop needs to change `count`."],
+    "xp": 40
+  },
+  {
+    "id": "py-control-q3",
+    "lessonId": "control-flow",
+    "type": "write-code",
+    "question": "Write code that prints the numbers 1 through 5, each on its own line.",
+    "starterCode": "",
+    "editorLanguage": "python",
+    "testCases": [
+      { "input": "", "expectedOutput": "1\n2\n3\n4\n5" }
+    ],
+    "explanation": "A `for i in range(1, 6): print(i)` loop covers 1 through 5, since range() excludes its stop value.",
+    "hints": ["range(1, 6) produces 1 through 5.", "You'll need a for loop and a print() call."],
+    "xp": 50
+  },
+  {
+    "id": "py-control-q4",
+    "lessonId": "control-flow",
+    "type": "mini-project",
+    "question": "FizzBuzz",
+    "description": "<p>Write a program that prints the numbers from 1 to 15. But for multiples of 3, print \"Fizz\" instead of the number, and for multiples of 5, print \"Buzz\". For numbers that are multiples of both 3 and 5, print \"FizzBuzz\".</p>",
+    "starterCode": "for i in range(1, 16):\n    # your code here\n    pass",
+    "editorLanguage": "python",
+    "testCases": [
+      { "input": "", "expectedOutput": "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz" }
+    ],
+    "explanation": "Check divisibility by 15 first (both 3 and 5), then 3, then 5, then fall back to printing the number itself — order matters since 15 is also divisible by 3 and 5 individually.",
+    "hints": ["Check the \"both 3 and 5\" case before the individual cases, or 15 will only ever print \"Fizz\".", "The % (modulo) operator tells you if a number divides evenly."],
+    "xp": 75
+  }
+]
