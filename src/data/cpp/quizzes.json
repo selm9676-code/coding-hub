@@ -1,0 +1,23 @@
+[
+  {
+    "id": "cpp-vars-q1",
+    "lessonId": "variables",
+    "type": "multiple-choice",
+    "question": "What happens if you try to assign a string literal to an `int` variable in C++?",
+    "options": ["It works, just like Python", "A compile error", "It silently converts to 0", "A runtime crash only"],
+    "correct": 1,
+    "explanation": "C++ is statically typed and checks types at compile time, so assigning a string to an int fails before the program ever runs.",
+    "hints": ["C++ checks types before the program runs, not while it runs.", "This is different from Python's dynamic typing."],
+    "xp": 25
+  },
+  {
+    "id": "cpp-vars-q2",
+    "lessonId": "variables",
+    "type": "true-false",
+    "question": "An uninitialized local variable in C++ is guaranteed to start at 0.",
+    "correct": false,
+    "explanation": "Unlike Go's zero values, an uninitialized local variable in C++ contains unpredictable garbage memory — always initialize explicitly.",
+    "hints": ["Reread the lesson's note about uninitialized variables."],
+    "xp": 20
+  }
+]
