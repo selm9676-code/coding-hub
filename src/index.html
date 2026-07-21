@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0a0a0f" />
+    <meta name="color-scheme" content="dark" />
+    <title>Coding Hub — Learn to Code</title>
+    <meta
+      name="description"
+      content="Learn 20+ programming languages through interactive lessons, live coding, and quizzes."
+    />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+
+    <!-- Self-hosted fonts, preloaded for LCP (spec §21) -->
+    <link rel="preload" href="./fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./fonts/jetbrains-mono-var.woff2" as="font" type="font/woff2" crossorigin />
+
+    <link rel="stylesheet" href="./styles/app.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <div id="app" class="app-shell">
+      <!-- App.js renders header, sidebar, main, bottom-nav, and mounts the
+           active route inside #main-content. This static shell exists so
+           first paint (skeleton) shows before any JS executes. -->
+      <header class="app-header" id="app-header" role="banner">
+        <div class="app-header__brand">
+          <strong>Coding Hub</strong>
+        </div>
+        <div class="app-header__actions" id="app-header-actions"></div>
+      </header>
+
+      <div class="app-shell__body">
+        <nav class="app-sidebar" id="app-sidebar" aria-label="Language tiers"></nav>
+
+        <main class="app-main" id="main-content" tabindex="-1">
+          <div class="skeleton" style="height: 240px; border-radius: var(--radius-lg);"></div>
+        </main>
+      </div>
+
+      <nav class="bottom-nav" id="bottom-nav" aria-label="Primary"></nav>
+    </div>
+
+    <div id="modal-root" aria-live="polite"></div>
+    <div class="toast-region" id="toast-root" aria-live="polite" aria-atomic="false"></div>
+
+    <!-- Inline SVG sprite sheet (spec §3, §8.6) is injected at runtime by
+         bootstrap.js so it's cacheable as a single fetched asset rather
+         than duplicated across every icon usage. -->
+    <div id="icon-sprite-root" hidden aria-hidden="true"></div>
+
+    <noscript>
+      <div style="padding: 2rem; font-family: sans-serif; color: #e8eaf6; background:#0a0a0f;">
+        Coding Hub requires JavaScript to run. Please enable it to continue.
+      </div>
+    </noscript>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
