@@ -1,0 +1,37 @@
+[
+  {
+    "id": "js-vars-q1",
+    "lessonId": "variables",
+    "type": "multiple-choice",
+    "question": "Which keyword should you use for a variable that will never be reassigned?",
+    "options": ["var", "let", "const", "static"],
+    "correct": 2,
+    "explanation": "const signals intent clearly and prevents accidental reassignment; let is for variables that will change, and var is legacy with confusing scoping.",
+    "hints": ["Think about which keyword literally means \"constant\".", "It's not let, and definitely not var."],
+    "xp": 25
+  },
+  {
+    "id": "js-vars-q2",
+    "lessonId": "variables",
+    "type": "drag-drop",
+    "question": "Match each value to its JavaScript type.",
+    "items": ["\"hello\"", "42", "true", "[1, 2, 3]"],
+    "slots": ["string", "number", "boolean", "array"],
+    "correctOrder": [0, 1, 2, 3],
+    "explanation": "Strings are quoted text, numbers are numeric literals, booleans are true/false, and arrays are ordered lists in square brackets.",
+    "hints": ["Quoted text is always a string.", "Square brackets mean an array."],
+    "xp": 30
+  },
+  {
+    "id": "js-vars-q3",
+    "lessonId": "variables",
+    "type": "code-completion",
+    "question": "Complete the declaration so `total` can be reassigned later.",
+    "starterCode": "___ total = 0;\ntotal = total + 10;",
+    "solution": "let total = 0;\ntotal = total + 10;",
+    "editorLanguage": "javascript",
+    "explanation": "Since `total` is reassigned on the next line, it must be declared with `let`, not `const`.",
+    "hints": ["const would throw an error on the reassignment below.", "Which keyword allows reassignment?"],
+    "xp": 30
+  }
+]
