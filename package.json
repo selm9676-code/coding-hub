@@ -1,0 +1,42 @@
+{
+  "name": "coding-hub",
+  "version": "0.1.0",
+  "description": "A production-grade, installable PWA that teaches 20+ programming languages through interactive lessons, live coding, quizzes, and progress tracking.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:unit": "vitest run",
+    "test:unit:watch": "vitest",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@codemirror/autocomplete": "^6.18.0",
+    "@codemirror/commands": "^6.7.0",
+    "@codemirror/lang-cpp": "^6.0.2",
+    "@codemirror/lang-javascript": "^6.2.2",
+    "@codemirror/lang-python": "^6.1.6",
+    "@codemirror/lang-rust": "^6.0.1",
+    "@codemirror/language": "^6.10.2",
+    "@codemirror/search": "^6.5.6",
+    "@codemirror/state": "^6.4.1",
+    "@codemirror/view": "^6.28.6",
+    "codemirror": "^6.0.1",
+    "@lezer/highlight": "^1.2.0",
+    "dompurify": "^3.1.6",
+    "fuse.js": "^7.0.0",
+    "highlight.js": "^11.10.0",
+    "marked": "^13.0.3"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0",
+    "vite-plugin-pwa": "^0.20.5",
+    "vitest": "^2.0.5",
+    "@playwright/test": "^1.46.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
